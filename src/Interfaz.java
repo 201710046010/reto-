@@ -30,27 +30,109 @@ public class Interfaz extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabelInsertarUsuario = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jLabelInsertarTienda = new javax.swing.JLabel();
+        jLabelCodigoTienda = new javax.swing.JLabel();
+        jTextFieldNombre = new javax.swing.JTextField();
+        jTextFieldCodigoTienda = new javax.swing.JTextField();
+        jLabelNombreTienda = new javax.swing.JLabel();
+        jTextFieldAdministrador = new javax.swing.JTextField();
+        jLabelCodigoAdmin = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextAreaDescripcion = new javax.swing.JTextArea();
+        jLabelDescripcion = new javax.swing.JLabel();
+        jButtonInsertarTienda = new javax.swing.JButton();
+        jTextFieldAdressId = new javax.swing.JTextField();
+        jLabelAdressId = new javax.swing.JLabel();
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1920, 1080));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelInsertarUsuario.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
-        jLabelInsertarUsuario.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelInsertarUsuario.setText("   Insertar Tienda");
-        getContentPane().add(jLabelInsertarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, 310, 30));
+        jLabelInsertarTienda.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        jLabelInsertarTienda.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelInsertarTienda.setText("   Insertar Tienda");
+        getContentPane().add(jLabelInsertarTienda, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, 310, 30));
 
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, 170, -1));
+        jLabelCodigoTienda.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelCodigoTienda.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelCodigoTienda.setText("Codigo");
+        getContentPane().add(jLabelCodigoTienda, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, -1, -1));
+
+        jTextFieldNombre.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        getContentPane().add(jTextFieldNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 170, -1));
+
+        jTextFieldCodigoTienda.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextFieldCodigoTienda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldCodigoTiendaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextFieldCodigoTienda, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 170, -1));
+
+        jLabelNombreTienda.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelNombreTienda.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelNombreTienda.setText("Nombre");
+        getContentPane().add(jLabelNombreTienda, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 170, -1, -1));
+
+        jTextFieldAdministrador.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextFieldAdministrador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldAdministradorActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextFieldAdministrador, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 220, 170, -1));
+
+        jLabelCodigoAdmin.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelCodigoAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelCodigoAdmin.setText("Codigo de administrador");
+        getContentPane().add(jLabelCodigoAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 150, 20));
+
+        jTextAreaDescripcion.setColumns(20);
+        jTextAreaDescripcion.setRows(5);
+        jScrollPane1.setViewportView(jTextAreaDescripcion);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 330, -1, -1));
+
+        jLabelDescripcion.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelDescripcion.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelDescripcion.setText("Descripción");
+        getContentPane().add(jLabelDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 360, -1, -1));
+
+        jButtonInsertarTienda.setText("INSERTAR");
+        jButtonInsertarTienda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonInsertarTiendaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonInsertarTienda, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 450, 100, 30));
+        getContentPane().add(jTextFieldAdressId, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 170, -1));
+
+        jLabelAdressId.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelAdressId.setText("Direccion");
+        getContentPane().add(jLabelAdressId, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, -1, -1));
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Holitas.jpg"))); // NOI18N
         getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTextFieldCodigoTiendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCodigoTiendaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldCodigoTiendaActionPerformed
+
+    private void jTextFieldAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldAdministradorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldAdministradorActionPerformed
+
+    private void jButtonInsertarTiendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInsertarTiendaActionPerformed
+        int Codigo = Integer.parseInt(jTextFieldCodigoTienda.getText());
+        String Nombre = jTextFieldNombre.getText();
+        int ManagerId = Integer.parseInt(jTextFieldAdministrador.getText());
+        int direccion = Integer.parseInt(jTextFieldAdressId.getText());
+        String descripcion = jTextAreaDescripcion.getText();
+        Consultas.agregarTienda(miConexion, Codigo, Nombre, ManagerId, direccion, descripcion);
+    }//GEN-LAST:event_jButtonInsertarTiendaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -90,8 +172,19 @@ public class Interfaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonInsertarTienda;
+    private javax.swing.JLabel jLabelAdressId;
+    private javax.swing.JLabel jLabelCodigoAdmin;
+    private javax.swing.JLabel jLabelCodigoTienda;
+    private javax.swing.JLabel jLabelDescripcion;
     private javax.swing.JLabel jLabelFondo;
-    private javax.swing.JLabel jLabelInsertarUsuario;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel jLabelInsertarTienda;
+    private javax.swing.JLabel jLabelNombreTienda;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextAreaDescripcion;
+    private javax.swing.JTextField jTextFieldAdministrador;
+    private javax.swing.JTextField jTextFieldAdressId;
+    private javax.swing.JTextField jTextFieldCodigoTienda;
+    private javax.swing.JTextField jTextFieldNombre;
     // End of variables declaration//GEN-END:variables
 }
