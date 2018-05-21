@@ -5,6 +5,8 @@
  */
 
 import java.sql.*;
+import javax.swing.*;
+import java.util.ArrayList;
 
 /**
  *
@@ -43,6 +45,30 @@ public class Interfaz extends javax.swing.JFrame {
         jButtonInsertarTienda = new javax.swing.JButton();
         jTextFieldAdressId = new javax.swing.JTextField();
         jLabelAdressId = new javax.swing.JLabel();
+        jLabelOrganizarClientes = new javax.swing.JLabel();
+        jTextFieldOrganizarClientes = new javax.swing.JTextField();
+        jLabelValor = new javax.swing.JLabel();
+        jButtonOrganizar = new javax.swing.JButton();
+        jLabelInsertarClientes = new javax.swing.JLabel();
+        jTextFieldCustomerId = new javax.swing.JTextField();
+        jLabelCodigoCliente = new javax.swing.JLabel();
+        jTextFieldPrimerNombre = new javax.swing.JTextField();
+        jLabelNombre = new javax.swing.JLabel();
+        jTextFieldLastName = new javax.swing.JTextField();
+        jLabelApellido = new javax.swing.JLabel();
+        jTextFieldEmail = new javax.swing.JTextField();
+        jLabelEmail = new javax.swing.JLabel();
+        jTextFieldDireccion = new javax.swing.JTextField();
+        jLabelDireccion = new javax.swing.JLabel();
+        jButtonInsertarClientes = new javax.swing.JButton();
+        jButtonGenerarReporte = new javax.swing.JButton();
+        jTextFieldFechaReporte = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextAreaReporte = new javax.swing.JTextArea();
+        jScrollPaneRecomendaciones = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jLabel2 = new javax.swing.JLabel();
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -111,6 +137,106 @@ public class Interfaz extends javax.swing.JFrame {
         jLabelAdressId.setText("Direccion");
         getContentPane().add(jLabelAdressId, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, -1, -1));
 
+        jLabelOrganizarClientes.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabelOrganizarClientes.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelOrganizarClientes.setText("Organizar clientes");
+        getContentPane().add(jLabelOrganizarClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 60, -1, -1));
+        getContentPane().add(jTextFieldOrganizarClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 120, 160, -1));
+
+        jLabelValor.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelValor.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelValor.setText("Valor");
+        getContentPane().add(jLabelValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 120, -1, -1));
+
+        jButtonOrganizar.setText("Organizar");
+        jButtonOrganizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonOrganizarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonOrganizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 160, -1, -1));
+
+        jLabelInsertarClientes.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabelInsertarClientes.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelInsertarClientes.setText("Insertar Clientes");
+        getContentPane().add(jLabelInsertarClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 70, -1, -1));
+        getContentPane().add(jTextFieldCustomerId, new org.netbeans.lib.awtextra.AbsoluteConstraints(1590, 130, 150, -1));
+
+        jLabelCodigoCliente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelCodigoCliente.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelCodigoCliente.setText("Codigo Cliente");
+        getContentPane().add(jLabelCodigoCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(1490, 130, -1, -1));
+        getContentPane().add(jTextFieldPrimerNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(1590, 170, 150, -1));
+
+        jLabelNombre.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelNombre.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelNombre.setText("Nombre");
+        getContentPane().add(jLabelNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(1520, 170, -1, -1));
+
+        jTextFieldLastName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldLastNameActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextFieldLastName, new org.netbeans.lib.awtextra.AbsoluteConstraints(1590, 210, 150, -1));
+
+        jLabelApellido.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelApellido.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelApellido.setText("Apellido");
+        getContentPane().add(jLabelApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(1530, 210, -1, -1));
+        getContentPane().add(jTextFieldEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(1590, 250, 150, -1));
+
+        jLabelEmail.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelEmail.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelEmail.setText("Email");
+        getContentPane().add(jLabelEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(1540, 250, -1, -1));
+        getContentPane().add(jTextFieldDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(1590, 290, 150, -1));
+
+        jLabelDireccion.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelDireccion.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelDireccion.setText("Direccion");
+        getContentPane().add(jLabelDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(1520, 290, -1, -1));
+
+        jButtonInsertarClientes.setText("Insertar");
+        jButtonInsertarClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonInsertarClientesActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonInsertarClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(1630, 340, -1, -1));
+
+        jButtonGenerarReporte.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButtonGenerarReporte.setText("Generar Reporte");
+        jButtonGenerarReporte.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGenerarReporteActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonGenerarReporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 350, 290, -1));
+        getContentPane().add(jTextFieldFechaReporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(699, 400, 170, -1));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Intervalo de fecha");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 400, -1, -1));
+
+        jTextAreaReporte.setColumns(20);
+        jTextAreaReporte.setRows(5);
+        jScrollPane2.setViewportView(jTextAreaReporte);
+
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 430, 300, 450));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPaneRecomendaciones.setViewportView(jTextArea1);
+
+        getContentPane().add(jScrollPaneRecomendaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 440, 370, 430));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Recomendaciones");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 360, 350, 50));
+
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Holitas.jpg"))); // NOI18N
         getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -133,6 +259,77 @@ public class Interfaz extends javax.swing.JFrame {
         String descripcion = jTextAreaDescripcion.getText();
         Consultas.agregarTienda(miConexion, Codigo, Nombre, ManagerId, direccion, descripcion);
     }//GEN-LAST:event_jButtonInsertarTiendaActionPerformed
+
+    private void jButtonOrganizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonOrganizarActionPerformed
+        int valor = Integer.parseInt(jTextFieldOrganizarClientes.getText());
+        try{
+        Statement st = miConexion.createStatement();
+        ResultSet rs = st.executeQuery("select count(store_id) from store");
+        int a =0;
+        if(rs.next()){
+        a = rs.getInt(1);
+        }
+        if (a >= 7){
+            CallableStatement procedimiento = miConexion.prepareCall("{call punto2("+ valor +")}");
+            procedimiento.execute();
+        }else {
+            JPanel panel = new JPanel();
+            panel.add(new JLabel("ERROR NO HAY SUFICIENTES TIENDAS"));
+        }
+        }catch(Exception e){
+            System.out.println(e);
+            System.exit(1);
+        }
+    }//GEN-LAST:event_jButtonOrganizarActionPerformed
+
+    private void jButtonInsertarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInsertarClientesActionPerformed
+        int CustomerId = Integer.parseInt(jTextFieldCustomerId.getText());
+        String nombre = jTextFieldPrimerNombre.getText();
+        String apellido= jTextFieldLastName.getText();
+        String email = jTextFieldEmail.getText();
+        int adress = Integer.parseInt(jTextFieldDireccion.getText());
+        int a = 0;
+        int StoreId = 0;
+        try{
+        Statement conexion = miConexion.createStatement();
+        ResultSet st = conexion.executeQuery("select count(customer_id) from customer where store_id = 1");
+        if(st.next()){
+            a = st.getInt(1);
+        }
+        }catch(Exception e){
+            System.out.println(e);
+            System.exit(2);
+        }
+        StoreId = a;
+            Consultas.agregarClientes(miConexion, CustomerId,StoreId,nombre, apellido, email, adress);
+    }//GEN-LAST:event_jButtonInsertarClientesActionPerformed
+
+    private void jTextFieldLastNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldLastNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldLastNameActionPerformed
+
+    private void jButtonGenerarReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGenerarReporteActionPerformed
+        String a = jTextFieldFechaReporte.getText();
+        String [] strings = a.split(" ");
+        String tiempo1 = strings[0] + " " + strings [1];
+        String tiempo2 = strings[2] + " " + strings [3];
+        String tiempotot =  tiempo1 + "," + tiempo2 ;
+        ArrayList <String> b = Consultas.recomendaciones(miConexion, tiempotot);
+        for(int i =0 ; i<b.size();++i){
+            jTextArea1.append(b.get(i)+ "\n");
+        }
+        try{
+            Statement procedimiento = miConexion.createStatement();
+            ResultSet st = procedimiento.executeQuery("call report ("+ tiempotot + " )");
+            int i =0;
+            while(st.next()){
+                jTextAreaReporte.append(st.getString(1)+ " " + st.getString(2) + "\n");
+            }
+        }catch(Exception e){
+            System.out.println(e);
+            System.exit(2);
+        }
+    }//GEN-LAST:event_jButtonGenerarReporteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -172,19 +369,43 @@ public class Interfaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonGenerarReporte;
+    private javax.swing.JButton jButtonInsertarClientes;
     private javax.swing.JButton jButtonInsertarTienda;
+    private javax.swing.JButton jButtonOrganizar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelAdressId;
+    private javax.swing.JLabel jLabelApellido;
     private javax.swing.JLabel jLabelCodigoAdmin;
+    private javax.swing.JLabel jLabelCodigoCliente;
     private javax.swing.JLabel jLabelCodigoTienda;
     private javax.swing.JLabel jLabelDescripcion;
+    private javax.swing.JLabel jLabelDireccion;
+    private javax.swing.JLabel jLabelEmail;
     private javax.swing.JLabel jLabelFondo;
+    private javax.swing.JLabel jLabelInsertarClientes;
     private javax.swing.JLabel jLabelInsertarTienda;
+    private javax.swing.JLabel jLabelNombre;
     private javax.swing.JLabel jLabelNombreTienda;
+    private javax.swing.JLabel jLabelOrganizarClientes;
+    private javax.swing.JLabel jLabelValor;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPaneRecomendaciones;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextAreaDescripcion;
+    private javax.swing.JTextArea jTextAreaReporte;
     private javax.swing.JTextField jTextFieldAdministrador;
     private javax.swing.JTextField jTextFieldAdressId;
     private javax.swing.JTextField jTextFieldCodigoTienda;
+    private javax.swing.JTextField jTextFieldCustomerId;
+    private javax.swing.JTextField jTextFieldDireccion;
+    private javax.swing.JTextField jTextFieldEmail;
+    private javax.swing.JTextField jTextFieldFechaReporte;
+    private javax.swing.JTextField jTextFieldLastName;
     private javax.swing.JTextField jTextFieldNombre;
+    private javax.swing.JTextField jTextFieldOrganizarClientes;
+    private javax.swing.JTextField jTextFieldPrimerNombre;
     // End of variables declaration//GEN-END:variables
 }
